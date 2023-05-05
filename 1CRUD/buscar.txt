@@ -1,0 +1,42 @@
+<?php
+include('conecta.php');
+$conecta = conecta();
+
+if(isset($_POST['buscar'])) {
+    $nombre = $_POST['nombre'];
+
+    // Verificar si el campo de búsqueda está vacío
+    if(empty($nombre)){
+        echo "<p>Por favor, ingrese un nombre para buscar.</p>";
+    } else {
+        // Preparar consulta para buscar el registro
+        $query = "SELECT * FROM personas WHERE nombre LIKE ?";
+        $stmt = $conecta->prepare($query);
+        $nombre = "%{$nombre}%";
+        $stmt->bind_param("s", $nombre);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if($result->num_rows == 0) {
+            echo "<p>No se encontraron resultados para: $nombre</p>";
+        } else {
+            // Mostrar resultados de búsqueda en una tabla
+            echo "<h2>Resultados de la búsqueda:</h2>";
+            echo "<table>";
+            echo "<tr><th>Nombre</th><th>Edad</th><th>Correo</th><th>Acciones</th></tr>";
+            while ($row = $result->fetch_assoc()) {
+                $id = $row['id'];
+                $nombre = $row['nombre'];
+                $edad = $row['edad'];
+                $correo = $row['correo'];
+                echo "<tr><td>$nombre</td><td>$edad</td><td>$correo</td>";
+                echo "<td><a href='editar.php?id=$id'><i class='fa fa-pencil-square-o' aria-hidden='true'></i> Editar</a> | ";
+                echo "<a href='eliminar.php?id=$id'><i class='fa fa-trash' aria-hidden='true'></i> Eliminar</a></td></tr>";
+            }
+            echo "</table>";
+        }
+        $stmt->close();
+    }
+}
+$conecta->close();
+?>

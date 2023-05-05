@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Editar Registros Mysql Mediante Funcion</title>
+</head>
+
+<body>
+<div>
+    <h1>Editar Registros con Función PHP</h1>
+    <br><br>
+    <?php 
+        include ('conecta.php');
+        $conecta = conecta();
+        
+        // Validar si se recibió un ID válido
+        if(isset($_GET['id']) && is_numeric($_GET['id'])){
+            $id = $_GET['id'];
+            
+            // Obtener el registro correspondiente al ID
+            $query = "SELECT * FROM tabla WHERE id = ?";
+            $stmt = $conecta->prepare($query);
+            $stmt->bind_param("i", $id);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            
+            if($resultado->num_rows == 1){
+                $fila = $resultado->fetch_assoc();
+                $nombre = $fila['nombre'];
+                $apellido = $fila['apellido'];
+            }else{
+                echo "<p>No se encontró ningún registro con el ID proporcionado.</p>";
+                exit();
+            }
+        }else{
+            echo "<p>El ID proporcionado no es válido.</p>";
+            exit();
+        }
+        
+        // Si se recibió el formulario
+        if(isset($_POST['editar'])){
+            // Validar los datos de entrada
+            $errores = array();
+            $nombre = trim($_POST['nombre']);
+            $apellido = trim($_POST['apellido']);
+            
+            if(empty($nombre)){
+                $errores[] = "El campo Nombre es obligatorio.";
+            }
+            if(empty($apellido)){
+                $errores[] = "El campo Apellido es obligatorio.";
+            }
+            
+            // Si no hay errores, actualizar el registro en la base de datos
+            if(empty($errores)){
+                $query = "UPDATE tabla SET nombre = ?, apellido = ? WHERE id = ?";
+                $stmt = $conecta->prepare($query);
+                $stmt->bind_param("ssi", $nombre, $apellido, $id);
+                
+                if($stmt->execute()){
+                    echo "<p>El registro se ha actualizado correctamente.</p>";
+                }else{
+                    echo "<p>No se pudo actualizar el registro. Error: " . $conecta->error . "</p>";
+                }
+            }else{
+                // Mostrar los errores de validación
+                foreach($errores as $error){
+                    echo "<p>$error</p>";
+                }
+            }
+        }
+    ?>
+    <form method="post" action="">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" value="<?php echo $nombre; ?>"><br><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" value="<?php echo $apellido; ?>"><br><br>
+        <input type="submit" name="editar" value="Editar">
+    </form>
+</div>
+</body>
+</html>
