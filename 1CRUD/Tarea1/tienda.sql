@@ -17,20 +17,12 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Database: `tienda`
---
+CREATE DATABASE tienda;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `producto`
---
-
-CREATE TABLE `producto` (
-  `idproducto` int(30) NOT NULL,
-  `nombre` varchar(30) NOT NULL,
-  `descripcion` varchar(250) NOT NULL
+CREATE TABLE producto (
+  idproducto int(30) NOT NULL,
+  nombre varchar(30) NOT NULL,
+  descripcion varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

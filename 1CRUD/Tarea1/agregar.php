@@ -10,7 +10,7 @@ $nombre = $_POST["nombre"];
 $descripcion = $_POST["descripcion"];
 
 // Preparamos la sentencia SQL para insertar un nuevo registro en la tabla "producto"
-$sentencia = "INSERT INTO producto (idproducto, nombre, descripcion) VALUES (:idproducto, :nombre, :descripcion)";
+$sentencia = "INSERT INTO producto (idproducto, nombre, descripcion) VALUES ('".$idproducto."','".$nombre."', '".$descripcion."')";
 $stmt = $conecta->prepare($sentencia);
 
 // Ligamos los parámetros de la sentencia con los valores obtenidos del formulario
@@ -30,4 +30,3 @@ if($stmt->execute()){
 // Redireccionamos al usuario a la página anterior
 header('Location:' . getenv('HTTP_REFERER'));
 ?>
-
