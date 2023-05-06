@@ -15,14 +15,11 @@ $stmt = $con->prepare($query);
 $stmt->execute();
 $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
 <html>
-
 <head>
-    <title>Consulta</title>
+    <title>BUSCAR UN REGISTRO O PRODUCTO EN LA BASE DE DATOS POR CODIGO</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
     <div class="parent-container">
         <div class="title">
@@ -40,9 +37,9 @@ $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php foreach ($resultados as $row) { ?>
                     <tbody>
                         <tr>
-                            <td><?php echo $row['idproducto']; ?></td>
-                            <td><?php echo $row['nombre']; ?></td>
-                            <td><?php echo $row['descripcion']; ?></td>
+                            <td><?php echo "" . $row['idproducto']; ?></td>
+                            <td><?php echo "" . $row['nombre']; ?></td>
+                            <td><?php echo "" . $row['descripcion']; ?></td>
                         </tr>
                     </tbody>
                 <?php } ?>
