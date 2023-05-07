@@ -1,6 +1,6 @@
 <?php
 // Incluimos el archivo que contiene la función para conectarnos a la base de datos
-include('conecta.php');
+include('conectar.php');
 
 // Verificamos si se recibió la petición por POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute()) {
         // Si se insertó el registro, mostramos un mensaje de éxito
         echo "Registro exitoso.";
+        echo "<BR><a href='index.php'><span>VOLVER</span></a>";
     } else {
         // Si no se insertó el registro, mostramos un mensaje de error con la información del error
         echo "Error al insertar el registro: " . $stmt->errorInfo()[2];

@@ -10,7 +10,7 @@ $con = conecta();
 
 <head>
     <title>conecta</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles-Index.css">
 </head>
 
 <body>
@@ -35,6 +35,9 @@ $con = conecta();
                     </p>
                     <p>
                         <a class="boton" href="consulta.php">consulta</a>
+                    </p>
+                    <p>
+                        <a class="boton" href="elimina.php">Eliminar</a>
                     </p>
                     <p class="center-content">
                         <input type="submit" class="btn btn-green" value="Enviar Datos">
