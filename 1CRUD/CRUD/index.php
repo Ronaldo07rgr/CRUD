@@ -31,7 +31,7 @@ $con = conecta();
                 </div>
                 <div class="buttons">
                     <p>
-                        <a class="boton" href="buscar.php">MOSTRAR</a>
+                        <a class="boton" href="buscar.php">Mostrar</a>
                     </p>
                     <p>
                         <a class="boton" href="consulta.php">consulta</a>
