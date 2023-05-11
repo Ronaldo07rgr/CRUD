@@ -21,15 +21,15 @@ if (isset($_POST['nombredb'])) {
 </head>
 <body>
     <form name="form1" method="post" action="eliminadb.php">
-        <table border="1" >
+        <table>
             <tr>
                 <td>DIGITE EL NOMBRE DE LA BASE DE DATOS A ELIMINAR:</td>
                 <td><input type="text" class="field" name="nombredb" required> <br/></td>
-                <td><input type="submit" class="btn btn-green" value="Enviar Datos"></td>
+                <td><input type="submit" class="btn btn-green" value="Eliminar DB"></td>
             </tr>
         </table>
     </form>
-    <table border="1" >
+    <table>
         <tr>
             <td>BASES DE DATOS EN EL SGBD</td>
         </tr>

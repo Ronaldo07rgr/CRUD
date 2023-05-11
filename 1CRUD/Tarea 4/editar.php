@@ -20,7 +20,7 @@ if (isset($_POST['guardar'])) {
     // Ejecutar la consulta SQL
     if ($stmt->execute()) {
         // Si la actualización ha sido exitosa, redirigir a la página principal
-        header('Location: index.php');
+        header('Location: buscar.php');
         exit;
     } else {
         // Si ha habido algún error, mostrar un mensaje de error
