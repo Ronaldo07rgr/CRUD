@@ -60,14 +60,14 @@ $productos = $stmt->fetchAll(PDO::FETCH_OBJ);
                     <tr>
                         <td><?= $producto->nombre ?></td>
                         <td><?= $producto->descripcion ?></td>
-                        <td><?= $producto->idproducto?></td>
+                        <td><?= $producto->idproducto ?></td>
                         <td>
-                            <a href="editar.php?id=<?= $producto->idproducto?>">
+                            <a href="editar.php?id=<?= $producto->idproducto ?>">
                                 <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
                             </a>
                         </td>
                         <td>
-                            <a href="elimina.php?id=<?= $producto->idproducto?>">
+                            <a href="elimina.php?id=<?= $producto->idproducto ?>">
                                 <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
                             </a>
                         </td>
@@ -75,7 +75,11 @@ $productos = $stmt->fetchAll(PDO::FETCH_OBJ);
                 <tbody>
                 <?php endforeach ?>
         </table>
+        <div class="buttons">
+            <a class="buton" href="index.php">Volver</a>
+        </div>
     </div>
 </body>
 <script src="https://kit.fontawesome.com/7fa9974a48.js" crossorigin="anonymous"></script>
+
 </html>
