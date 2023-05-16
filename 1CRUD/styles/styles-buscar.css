@@ -70,7 +70,7 @@ body {
   justify-content: center;
  }
 
- tbody td:nth-child(4):hover, tbody td:nth-child(4) a:hover{
+ tbody td:hover, tbody td:nth-child(4) a:hover{
   background-color: whitesmoke;
   color: #007fff;
  }
