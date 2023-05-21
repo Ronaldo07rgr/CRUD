@@ -4,7 +4,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="?c=proveedor">Proveedores</a></li>
-        <li class="active">Nuevo Registro</li>
+        <li class="active pl-3">Nuevo Registro</li>
     </ol>
     <form id="frm-proveedor" action="?c=proveedor&a=Guardar" method="post" enctype="multipart/form-data">
         <div class="form-group">

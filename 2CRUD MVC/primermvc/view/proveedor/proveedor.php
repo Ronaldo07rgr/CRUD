@@ -35,8 +35,8 @@
         </tbody>
     </table>
     <div class="well well-sm text-center">
-        <a class="btn btn-primary" href="?c=proveedor&a=Nuevo">Nuevo Proveedor</a>
-        <a class="btn btn-primary" href="?c=producto&a=Nuevo">Nuevo Producto</a>
+        <a class="btn btn-dark" href="?c=proveedor&a=Nuevo">Nuevo Proveedor</a>
+        <a class="btn btn-dark" href="?c=producto&a=Nuevo">Nuevo Producto</a>
     </div>
 </div>
 <script src="https://kit.fontawesome.com/7fa9974a48.js" crossorigin="anonymous"></script>

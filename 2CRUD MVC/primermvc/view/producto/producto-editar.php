@@ -1,9 +1,10 @@
+<div class="container">
 <h1 class="page-header">
     <?php echo $prod->idProducto != null ? $prod->nomprod : 'Nuevo Registro'; ?>
 </h1>
 <ol class="breadcrumb">
     <li><a href="?c=producto">Productos</a></li>
-    <li class="active">
+    <li class="active pl-3">
         <?php echo $prod->idProducto != null ? $prod->nomprod : 'Nuevo Registro';
         ?>
     </li>
@@ -32,6 +33,7 @@ form-data">
         <button class="btn btn-success">Actualizar</button>
     </div>
 </form>
+</div>
 <script>
     $(document).ready(function () {
         $("#frm-producto").submit(function () {
