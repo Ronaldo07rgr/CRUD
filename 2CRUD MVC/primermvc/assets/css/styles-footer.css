@@ -1,0 +1,46 @@
+footer{
+  margin-top: 30px;
+}
+footer .button-footer {
+  height: 3.5em;
+  border: none;
+  border-radius: 40px;
+  margin-top: 20px;
+}
+
+footer .button-footer span {
+  z-index: 1;
+  display: inline-block;
+  width: 3.5em;
+  border-radius: 25px;
+  color: #fff;
+  line-height: 55px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  transition: all 0.5s;
+}
+
+footer .button-footer .container-icon {
+  z-index: -1;
+  width: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50px);
+  transition: all 0.4s;
+}
+
+footer .button-footer .container-icon svg {
+  padding: 0 10px;
+}
+
+footer .button-footer:hover span {
+  width: 0;
+}
+
+footer .button-footer:hover .container-icon {
+  z-index: 2;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 40px;
+}

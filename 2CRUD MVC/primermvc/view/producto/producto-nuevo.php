@@ -29,6 +29,7 @@
         </div>
         <hr />
         <div class="text-right">
+            <span class="btn btn-success"><a href="?c=producto" class="text-decoration-none text-white">Volver</a></span>
             <button class="btn btn-success">Guardar</button>
         </div>
     </form>

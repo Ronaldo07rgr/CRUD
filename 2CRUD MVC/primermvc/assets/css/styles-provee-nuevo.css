@@ -1,0 +1,53 @@
+.input-prov-nue {
+  color: #8f8f8f;
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  padding-block: 0.5em;
+  border: none;
+}
+
+.input-prov-nue:hover{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-border {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.input-prov-nue:focus {
+  outline: none;
+}
+
+.input-prov-nue:focus + .input-border {
+  width: 100%;
+}
+
+.form-control {
+  position: relative;
+  --width-of-input: 300px;
+}
+
+.input-alt {
+  font-size: 1rem;
+}
+
+.input-alt:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-border-alt {
+  height: 3px;
+  background: linear-gradient(90deg, #FF6464 0%, #FFBF59 50%, #47C9FF 100%);
+  transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
+}
+
+.input-alt:focus + .input-border-alt {
+  width: 100%;
+}
