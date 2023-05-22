@@ -5,39 +5,67 @@
   <title>CRUD MVC PHP + MySQL</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/styles-header.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#">WEB</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Inicio</a>
+              <button class="button">
+                <span><a href="index.php">inicio</a></span>
+              </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Acerca de</a>
+              <button class="button">
+                <span><a href="?c=proveedor">Proveedores</a></span>
+              </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
+              <button class="button">
+                <span><a href="?c=producto">Productos</a></span>
+              </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
+              <button class="button">
+                <span><a href="#">contactos</a></span>
+              </button>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
-          </form>
         </div>
+
+        <form class="d-flex">
+          <div class="input-wrapper">
+            <button class="icon" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
+                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="black"
+                  d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z">
+                </path>
+                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="black" d="M22 22L20 20">
+                </path>
+              </svg>
+            </button>
+            <input placeholder="search.." class="input" name="text" type="text">
+          </div>
+        </form>
+
       </div>
     </nav>
   </header>
 </body>
+
+</html>

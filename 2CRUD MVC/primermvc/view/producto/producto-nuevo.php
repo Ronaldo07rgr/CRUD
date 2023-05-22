@@ -9,15 +9,15 @@
     <form id="frm-producto" action="?c=producto&a=Guardar" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label>Código Producto</label>
-            <input type="text" name="idProducto" value="<?php echo $prod->idProducto; ?>" class="form-control" placeholder="Ingrese Código Producto" data-validacion-tipo="requerido|min:20" />
+            <input type="number" name="idProducto" value="<?php echo $prod->idProducto; ?>" class="form-control" placeholder="Ingrese Código Producto" data-validacion-tipo="requerido|min:20" />
         </div>
         <div class="form-group">
             <label>Nit Proveedor</label>
-            <input type="text" name="nit" value="<?php echo $prod->nit; ?>" class="form-control" place-holder="Ingrese NIT Proveedor" data-validacion-tipo="requerido|min:20" />
+            <input type="number" name="nit" value="<?php echo $prod->nit; ?>" class="form-control" placeholder="Ingrese NIT Proveedor" data-validacion-tipo="requerido|min:20" />
         </div>
         <div class="form-group">
             <label>Nombre Producto</label>
-            <input type="text" name="nomprod" value="<?php echo $prod->nomprod; ?>" class="form-control" placeholder="Ingrese nombre producto" data-validacion-tipo="requerido|min:100" />
+            <input type="text" name="nomprod" value="<?php echo $prod->nomprod; ?>" class="form-control" placeholder="Ingrese nombre producto" data-validacion-tipo="requerido|min:100" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" title="Ingresa solo texto" />
         </div>
         <div class="form-group">
             <label>Precio Unitario</label>
@@ -25,7 +25,7 @@
         </div>
         <div class="form-group">
             <label>Descripción del Producto</label>
-            <input type="text" name="descrip" value="<?php echo $prod->descrip; ?>" class="form-control" placeholder="Ingrese descripción producto" data-validacion-tipo="requerido|min:240" />
+            <input type="text" name="descrip" value="<?php echo $prod->descrip; ?>" class="form-control" placeholder="Ingrese descripción producto" data-validacion-tipo="requerido|min:240" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" title="Ingresa solo texto" />
         </div>
         <hr />
         <div class="text-right">
