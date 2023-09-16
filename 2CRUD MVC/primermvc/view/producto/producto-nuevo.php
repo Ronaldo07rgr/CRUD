@@ -3,7 +3,7 @@
         Nuevo Registro
     </h1>
     <ol class="breadcrumb ">
-        <li ><a href="?c=producto">Productos</a></li>
+        <li><a href="?c=producto">Productos</a></li>
         <li class="active ml-3">Nuevo Registro</li>
     </ol>
     <form id="frm-producto" action="?c=producto&a=Guardar" method="post" enctype="multipart/form-data">
@@ -35,8 +35,8 @@
     </form>
 </div>
 <script>
-    $(document).ready(function () {
-        $("#frm-producto").submit(function () {
+    $(document).ready(function() {
+        $("#frm-producto").submit(function() {
             return $(this).validate();
         });
     })

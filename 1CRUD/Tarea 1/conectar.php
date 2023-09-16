@@ -23,4 +23,3 @@ function conecta(){
         die("Error al conectar: " . $e->getMessage());
     }
 }
-?>

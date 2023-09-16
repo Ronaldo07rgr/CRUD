@@ -37,4 +37,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Cerramos la conexión con la base de datos
 $pdo = null;
-?>

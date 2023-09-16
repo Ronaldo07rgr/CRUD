@@ -8,7 +8,7 @@
   border: none;
 }
 
-.input-prov-nue:hover{
+.input-prov-nue:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -25,7 +25,7 @@
   outline: none;
 }
 
-.input-prov-nue:focus + .input-border {
+.input-prov-nue:focus+.input-border {
   width: 100%;
 }
 
@@ -38,7 +38,7 @@
   font-size: 1rem;
 }
 
-.input-alt:hover{
+.input-alt:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -48,6 +48,6 @@
   transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
 }
 
-.input-alt:focus + .input-border-alt {
+.input-alt:focus+.input-border-alt {
   width: 100%;
 }

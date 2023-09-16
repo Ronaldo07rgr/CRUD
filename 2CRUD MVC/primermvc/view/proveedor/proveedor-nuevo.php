@@ -14,36 +14,28 @@
         <div class="form-group">
             <label>Nit</label>
             <div class="form-control border-0">
-                <input type="text" name="nit" value="<?php echo $pvd->nit; ?>" class="input input-alt input-prov-nue"
-                    data-validacion-tipo="requerido|min:20" pattern="[0-9\-]+"
-                    title="Ingresa solo números" required />
+                <input type="text" name="nit" value="<?php echo $pvd->nit; ?>" class="input input-alt input-prov-nue" data-validacion-tipo="requerido|min:20" pattern="[0-9\-]+" title="Ingresa solo números" required />
                 <span class="input-border input-border-alt"></span>
             </div>
         </div>
         <div class="form-group">
             <label>Razón Social</label>
             <div class="form-control border-0">
-                <input type="text" name="razonS" value="<?php echo $pvd->razonS; ?>" class="input input-alt input-prov-nue"
-                    data-validacion-tipo="requerido|min:100"
-                    pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" title="Ingresa solo texto" required />
+                <input type="text" name="razonS" value="<?php echo $pvd->razonS; ?>" class="input input-alt input-prov-nue" data-validacion-tipo="requerido|min:100" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" title="Ingresa solo texto" required />
                 <span class="input-border input-border-alt"></span>
             </div>
         </div>
         <div class="form-group">
             <label>Dirección</label>
             <div class="form-control border-0">
-                <input type="text" name="dir" value="<?php echo $pvd->dir; ?>" class="input input-alt input-prov-nue"
-                    data-validacion-tipo="requerido|min:100"
-                    pattern="[A-Za-z0-9\s#\-]+" required />
+                <input type="text" name="dir" value="<?php echo $pvd->dir; ?>" class="input input-alt input-prov-nue" data-validacion-tipo="requerido|min:100" pattern="[A-Za-z0-9\s#\-]+" required />
                 <span class="input-border input-border-alt"></span>
             </div>
         </div>
         <div class="form-group">
             <label>Teléfono</label>
             <div class="form-control border-0">
-                <input type="text" name="tel" value="<?php echo $pvd->tel; ?>" class="input input-alt border-0 input-prov-nue"
-                    data-validacion-tipo="requerido|min:10" pattern="^\+?\d+$"
-                    title="Ingresa solo números" required />
+                <input type="text" name="tel" value="<?php echo $pvd->tel; ?>" class="input input-alt border-0 input-prov-nue" data-validacion-tipo="requerido|min:10" pattern="^\+?\d+$" title="Ingresa solo números" required />
                 <span class="input-border input-border-alt"></span>
             </div>
         </div>
@@ -53,8 +45,8 @@
     </form>
 </div>
 <script>
-    $(document).ready(function () {
-        $("#frm-proveedor").submit(function () {
+    $(document).ready(function() {
+        $("#frm-proveedor").submit(function() {
             return $(this).validate();
         });
     })

@@ -29,8 +29,7 @@
                     </td>
                     <td class="text-center text-dark" style="width:15px; border: none;">
                         <span class="btn-delete btn btn-dark">
-                            <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');"
-                                href="?c=producto&a=Eliminar&idProducto=<?php echo $r->idProducto; ?>">
+                            <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=producto&a=Eliminar&idProducto=<?php echo $r->idProducto; ?>">
                                 <span class="icon-wrapper">
                                     <i class="fa fa-trash-o"></i>
                                 </span>

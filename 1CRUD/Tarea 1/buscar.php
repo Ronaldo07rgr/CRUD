@@ -43,7 +43,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_OBJ);
                     <tr>
                         <td><?= $producto->nombre ?></td>
                         <td><?= $producto->descripcion ?></td>
-                        <td><?= $producto->idproducto?></td>
+                        <td><?= $producto->idproducto ?></td>
                     </tr>
                 <tbody>
                 <?php endforeach ?>
@@ -51,4 +51,5 @@ $productos = $stmt->fetchAll(PDO::FETCH_OBJ);
     </div>
 </body>
 <script src="https://kit.fontawesome.com/7fa9974a48.js" crossorigin="anonymous"></script>
+
 </html>

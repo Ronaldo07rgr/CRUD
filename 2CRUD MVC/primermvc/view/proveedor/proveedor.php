@@ -10,7 +10,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($this->model->Listar() as $r): ?>
+            <?php foreach ($this->model->Listar() as $r) : ?>
                 <tr>
                     <td class="pt-3 border-0">
                         <?php echo $r->nit; ?>
@@ -35,8 +35,7 @@
                     </td>
                     <td class="text-center text-dark" style="width:15px; border: none;">
                         <span class="btn-delete btn btn-dark">
-                            <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');"
-                                href="?c=proveedor&a=Eliminar&nit=<?php echo $r->nit; ?>">
+                            <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=proveedor&a=Eliminar&nit=<?php echo $r->nit; ?>">
                                 <span class="icon-wrapper">
                                     <i class="fa fa-trash-o"></i>
                                 </span>
