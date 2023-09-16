@@ -40,6 +40,7 @@
             </div>
         </div>
         <div class="text-center pt-3">
+            <span class="btn btn-success btn-dark"><a href="?c=proveedor" class="text-decoration-none text-white">Volver</a></span>
             <button class="btn btn-success btn-dark">Guardar</button>
         </div>
     </form>
